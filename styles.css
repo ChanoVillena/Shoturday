@@ -1,0 +1,833 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+:root {
+    --pinkneon: #FF00CC;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 1rem;
+    color: white;
+    line-height: 1.6;
+}
+
+body {
+    background: #101010;
+    scroll-behavior: smooth;
+}
+
+
+/* ----- HEADER SECTION ----- */
+
+.container {
+    position: relative;
+}
+
+.logobar {
+    margin-right: auto;
+}
+
+
+span {
+    color: var(--pinkneon);
+    text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em var(--pinkneon);
+}
+
+.logo, span{
+    margin-right: auto;
+    /* font-style: italic; */
+    font-size: 1.35rem;
+    letter-spacing: 3px;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.navbar {
+    width: 85%;
+    margin: auto;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.nav {
+    display: flex;
+}
+
+
+.bars {
+    display: none;
+    width: 26px;
+    height: 2px;
+    background: white;
+    transition: all 300ms ease-in-out;
+    transform-origin: 3px 1px;
+}
+
+.bars:not(:last-child) {
+    margin-bottom: 5px;
+}
+
+.open .bars:first-child {
+    transform: rotate(45deg);
+}
+
+.open .bars:nth-child(2) {
+    opacity: 0;
+}
+
+.open .bars:last-child {
+    transform: rotate(-45deg);
+}
+
+.bars-menu {
+    position: absolute;
+    display: none;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 1.625rem;
+    text-align: center;
+    margin-top: 1.5rem;
+    border-radius: 10px;
+    width: calc(100% - 3rem);
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    transition: opacity 300ms ease-in-out;
+}
+
+.bars-menu a {
+    color: white;
+    padding: 0.625rem;
+}
+
+.bars-menu .login {
+    color: var(--pinkneon);
+}
+
+.bars-menu .sign-up {
+    color: var(--pinkneon);
+    border-bottom: 1px solid var(--pinkneon);
+}
+
+.opens {
+    opacity: 0;
+}
+
+.navlinks {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-right: 35px;
+    font-weight: 400;
+}
+
+.list {
+    display: inline-block;
+}
+
+.links {
+    position: relative;
+    transition: all 200ms;
+}
+
+.links::after {
+    content: '';
+    position: absolute;
+    display: block;
+    border-radius: 50px;
+    height: 3px;
+    left: 0;
+    right: 0;
+    bottom: -13px;
+    background: var(--pinkneon);
+    opacity: 0;
+    transition: all 200ms;
+}
+
+.links:hover::after,
+.links:focus::after {
+    opacity: 1;
+}
+
+.navbutton {
+    display: flex;
+    gap: 15px;
+    font-weight: 600;
+}
+
+.btn-links {
+    padding: 5px 15px;
+    border: var(--pinkneon) 2px solid;
+    border-radius: 5px;
+    color: var(--pinkneon);
+    text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em var(--pinkneon);
+    box-shadow: inset 0 0 0.5em 0 var(--pinkneon), 0 0 0.5em 0 var(--pinkneon);
+    position: relative;
+    transition: background-color 100ms linear;
+}
+
+.btn-links::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 0 2em 0.5em var(--pinkneon);
+    opacity: 0;
+}
+
+.btn-links:hover,
+.btn-links:focus {
+    background: var(--pinkneon);
+    color: white;
+    text-shadow: none;
+}
+
+.btn-links:hover::after,
+.btn-links:focus::after {
+    opacity: 1;
+}
+
+.links, .btn-links {
+    font-size: 0.875rem;
+}
+
+/* ----- HEADE SECTION ENDS ----- */
+
+
+
+
+/* ------  HERO SECTION -------- */
+
+.hero-section {
+    margin-top: 100px;
+    position: relative;
+    height: 80vh;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 75%;
+    margin: auto;
+    position: relative;
+}
+
+.hero-content {
+    flex: 1;
+    text-align: start;
+}
+
+.hero-title {
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: var(--pinkneon);
+    margin: 20px 0;
+    line-height: normal;
+    font-family: 'Pacifico', cursive;
+}
+
+.hero-prgp {
+    font-size: 0.875rem;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.hero-btn {
+    font-weight: 600;
+    padding: 6px 17px;
+    border: var(--pinkneon) 2px solid;
+    border-radius: 5px;
+    color: var(--pinkneon);
+    text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em var(--pinkneon);
+    box-shadow: inset 0 0 0.5em 0 var(--pinkneon), 0 0 0.5em 0 var(--pinkneon);
+    position: relative;
+    transition: background-color 100ms linear;
+}
+
+.hero-btn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 0 2em 0.5em var(--pinkneon);
+    opacity: 0;
+}
+
+.hero-btn:hover,
+.hero-btn:focus {
+    background: var(--pinkneon);
+    color: white;
+    text-shadow: none;
+}
+
+.hero-btn:hover::after,
+.hero-btn:focus::after {
+    opacity: 1;
+}
+
+
+.hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.wine-hero {
+    width: 380px;
+    height: 380px;
+}
+
+/* ------  HERO SECTION ENDS -------- */
+
+
+
+
+
+/* ----- OFFER SECTION ----- */
+.offer-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 0;
+    /* position: relative; */
+}
+
+.offer-heading {
+    font-size: 2.5rem;
+    font-family: 'Pacifico', cursive;
+    text-align: center;
+    color: var(--pinkneon);
+    padding: 0.3125rem 3rem;
+    border: 6px solid var(--pinkneon);
+    border-radius: 20px 40px;
+    text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em var(--pinkneon);
+    box-shadow: inset 0 0 0.5em 0 var(--pinkneon), 0 0 0.5em 0 var(--pinkneon);
+}
+
+.offer-container {
+    width: 95%;
+    margin: 60px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.offer-box {
+    flex: 1 0 300px;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .5);
+    border-radius: .5rem;
+    border: .1rem solid rgba(0, 0, 0, .2);
+    cursor: pointer;
+    max-width: 100%;
+    transition: transform 200ms ease-in-out;
+}
+
+.offer-box:hover,
+.offer-box:focus {
+    transform: translateY(-1rem);
+}
+
+.offer-content {
+    text-align: center;
+    padding: 2rem;
+    width: 280px;
+}
+
+.off-logo-con {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.offer-logo {
+    font-size: 2.5rem;
+    color: var(--pinkneon);
+}
+
+.offer-content h3 {
+    font-size: 1.5rem;
+}
+
+.offer-content p {
+    padding: 1.5rem 0;
+    font-size: 0.875rem;
+}
+
+/* ----- OFFER SECTION ENDS----- */
+
+
+
+
+
+
+/* ----- MENU SECTION ----- */
+
+.shot-menu {
+    padding: 0 40px;
+}
+
+.menu-section {
+    padding-top: 60px;
+    position: relative;
+}
+
+.menu-heading {
+    width: max-content;
+    margin: auto;
+    font-family: 'Pacifico', cursive;
+    font-weight: 400;
+    text-align: center;
+    font-size: 2.5rem;
+    padding: 0.3125rem 3rem;
+    border: 6px solid var(--pinkneon);
+    border-radius: 20px 40px;
+    color: var(--pinkneon);
+    text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em var(--pinkneon);
+    box-shadow: inset 0 0 0.5em 0 var(--pinkneon), 0 0 0.5em 0 var(--pinkneon);
+}
+
+.beer-menu {
+    width: 95%;
+    margin: 60px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.beer-card {
+    min-height: 438px;
+    background-color: rgba(0, 0, 0, 0.3);
+    background-blend-mode: multiply;
+    max-width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .5);
+    padding: 10rem 0 0;
+    max-width: 40ch;
+    border-radius: .5rem;
+    overflow: hidden;
+    transition: transform 500ms ease;
+}
+
+.beer-card:hover,
+.beer-card:focus-within {
+    transform: scale(1.05);
+}
+
+.beer-content {
+    display: flex;
+    flex-direction: column;
+    min-height: 280px;
+    padding: 1.5rem;
+    background: linear-gradient(
+        hsl(0 0% 0% / 0),
+        hsl(20 0% 0% / 0.3) 20%, 
+        hsl(0 0% 0% / 1));
+}
+
+.beer-content h1 {
+    font-size: 1.5rem;
+}
+
+.beer-content h2 {
+    padding-top: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.beer-content p {
+    padding-bottom: 1.5rem;
+    font-size: 0.875rem;
+}
+
+.beer-name {
+    position: relative;
+    width: max-content;
+}
+
+.beer-name::after {
+    content: "";
+    position: absolute;
+    height: 4px;
+    width: calc(100% + 1.5rem);
+    background: var(--pinkneon);
+    border-radius: 5px;
+    box-shadow: 0 0 0.5em 0 var(--pinkneon);
+    left: calc(1.5rem * -1);
+    bottom: 0;
+    transform-origin: left;
+    transition: transform 500ms ease;
+}
+
+.beer-card:hover .beer-name::after,
+.beer-card:focus-within .beer-name::after {
+    transform: scaleX(1);
+}
+
+.beer-btn {
+    margin: auto 0;
+    width: max-content;
+    font-weight: 600;
+    padding: 5px 15px;
+    border: var(--pinkneon) 2px solid;
+    border-radius: 5px;
+    color: var(--pinkneon);
+    text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em var(--pinkneon);
+    box-shadow: inset 0 0 0.5em 0 var(--pinkneon), 0 0 0.5em 0 var(--pinkneon);
+    position: relative;
+    transition: background-color 100ms linear;
+}
+
+.beer-btn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 0 2em 0.5em var(--pinkneon);
+    opacity: 0;
+}
+
+.beer-btn:hover,
+.beer-btn:focus {
+    background: var(--pinkneon);
+    color: white;
+    text-shadow: none;
+}
+
+.beer-btn:hover::after,
+.beer-btn:focus::after {
+    opacity: 1;
+}
+
+
+/* ----- MENU SECTION ENDS ----- */
+
+
+
+
+
+/* ----- ABOUT SECTION ----- */
+
+.about-section {
+    height: 50vh;
+    padding: 60px;
+    margin-top: 120px;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: multiply;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: start;
+    position: relative;
+}
+
+.about-content {
+    width: 85%;
+    margin: auto;
+}
+
+.about-content h1 {
+    width: max-content;
+    align-self: center;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: var(--pinkneon);
+    font-family: 'Pacifico', cursive;
+    padding: 0.10rem 2rem;
+    border: 6px solid var(--pinkneon);
+    border-radius: 20px 40px;
+    text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em var(--pinkneon);
+    box-shadow: inset 0 0 0.5em 0 var(--pinkneon), 0 0 0.5em 0 var(--pinkneon);
+}
+
+.about-content p{
+    max-width: 70%;
+    font-size: 0.875rem;
+    
+}
+
+/* ----- ABOUT SECTION ENDS ----- */
+
+
+
+
+/* ----- CONTACT SECTION ----- */
+
+.contact-section {
+    background-color: #202020;
+    padding: 20px;
+    font-family: 'Pacifico', cursive;
+}
+
+.contact-container {
+    width: 85%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.social h1 {
+    color: dimgray;
+}
+
+.social-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding-top: 10px;
+}
+
+.contact-icon {
+    font-size: 1.5rem;
+    color: dimgray;
+}
+
+.social-icons a p {
+    font-size: 0.875rem;
+    color: dimgray;
+}
+
+.social-icons p:hover {
+    color: white;
+}
+
+.designed {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.designed > * {
+    color: dimgray;
+    font-size: 0.875rem;
+    text-align: center;
+}
+
+/* ----- CONTACT SECTION ENDS----- */
+
+
+
+
+
+
+/* ----- MOBILE AND TABLET VIEWS ----- */
+
+
+@media (hover) {
+    .beer-content {
+        transform: translateY(70%);
+        transition: transform 500ms ease;
+    }
+
+    .beer-card:hover .beer-content,
+    .beer-card:focus-within .beer-content {
+        transform: translateY(0);
+        transition-delay: 500ms;
+    }
+
+    .beer-card:focus-within .beer-content {
+        transition-duration: 0ms;
+    }
+
+    .beer-content > *:not(.beer-name) {
+        opacity: 0;
+        transition: opacity 500ms linear;
+    }
+
+    .beer-card:hover .beer-content > *:not(.beer-name),
+    .beer-card:focus-within .beer-content > *:not(.beer-name) {
+        opacity: 1;
+        transition-delay: 1000ms;
+    }
+
+    .beer-name::after {
+        transform: scaleX(0);
+    }
+
+}
+
+@media (max-width: 1200px) {
+    .hero {
+        padding: 0px;
+    }
+
+    .wine-hero {
+        width: 320px;
+        height: 320px;
+    }
+}
+
+@media (max-width: 900px) {
+    .hero {
+        padding: 0px;
+        width: 90%;
+        margin: auto;
+    }
+
+    .wine-hero {
+        width: 300px;
+        height: 300px;
+    }
+    
+}
+
+@media (max-width: 800px) {
+    .navbar {
+        width: 90%;
+        margin: auto;
+        padding-inline: 0px;
+    }
+
+    .links, .btn-links {
+        font-size: 0.875rem;
+    }
+
+    .navlinks {
+        gap: 15px;
+        margin-right: 35px;
+    }
+
+    .about-section {
+        text-align: center;
+    }
+
+    .about-content p {
+        max-width: 35rem;
+    }
+
+    .about-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contact-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+    }
+
+    .social {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .designed .nameko {
+        min-width: 300px;
+    }
+
+    .contact-section {
+        padding-inline: 30px;
+    }
+
+}
+
+@media (max-width: 690px) {
+    .navbar {
+        width: 90%;
+        margin: auto;
+        padding-inline: 0px;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .bars {
+        display: block;
+    }
+
+    .logo, span {
+        font-size: 1.25rem;
+    }
+
+    .hero-section {
+        margin-top: 50px;
+        margin-bottom: 60px;
+    }
+
+    .hero {
+        flex-direction: column-reverse;
+        padding-inline: 0;
+    }
+
+    .hero-content {
+        text-align: center;
+        max-width: 30rem;
+    }
+
+    .hero-title {
+        font-size: 25px;
+    }
+
+    .wine-hero {
+        width: 250px;
+        height: 250px;
+    }
+
+    .menu-heading {
+        font-size: 2rem;
+        padding: 0.25rem 2.5rem;
+    }
+
+    .offer-heading {
+        font-size: 1.7rem;
+        padding: 0.15rem 2rem;
+    }
+
+    .bars-menu {
+        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+}
+
+@media (max-width: 450px) {
+    .about-content p {
+        max-width: 500px;
+    }
+
+    .about-section {
+        padding-inline: 20px;
+    }
+
+    .designed > * {
+        font-size: 0.8125rem;
+        text-align: center;
+    }
+}
+
+
