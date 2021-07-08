@@ -16,9 +16,12 @@
     line-height: 1.6;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background: #101010;
-    scroll-behavior: smooth;
 }
 
 
@@ -107,13 +110,28 @@ span {
     padding: 0.625rem;
 }
 
+.bars-menu a:hover,
+.bars-menu a:focus {
+    color: var(--pinkneon);
+}
+
 .bars-menu .login {
     color: var(--pinkneon);
+}
+
+.bars-menu .login:hover,
+.bars-menu .login:focus {
+    color: white;
 }
 
 .bars-menu .sign-up {
     color: var(--pinkneon);
     border-bottom: 1px solid var(--pinkneon);
+}
+
+.bars-menu .sign-up:hover,
+.bars-menu .sign-up:focus {
+    color: white;
 }
 
 .opens {
